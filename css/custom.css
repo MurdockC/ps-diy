@@ -6,7 +6,7 @@
 
 }
 
-.window-background, .window-motor, .window-shade , #shade-color , #motor-color, #open-roll, #roll-color {
+.window-background, .window-motor, .window-shade , #shade-color , #motor-color, #open-roll, #roll-color, #roll-hardware {
   position: absolute;
   width: 100%;
 }
@@ -83,12 +83,12 @@ input[type=number] {
   position: relative;
 }
 
-#shade-color, #motor-color, #hardware-color, #roll-color, #cassette-color {
+#shade-color, #motor-color, #hardware-color, #roll-color, #cassette-color, #roll-hardware {
   mix-blend-mode: multiply;
   opacity: 1;
 }
 
-#shade-color-shape, .motor-color-shape, #hardware-color-shape, #roll-color-shape, #cassette-color-shape {
+#shade-color-shape, .motor-color-shape, #hardware-color-shape, #roll-color-shape, #cassette-color-shape, #roll-hardware-shape-one, #roll-hardware-shape-two {
   fill: #fff;
 }
 
@@ -240,4 +240,26 @@ justify-content: space-between;
 
 .cassette {
   display: none;
+}
+
+#dimensions {
+  display: flex;
+  justify-content: space-around;
+  border: 2px solid red;
+  padding-top: 30px;
+}
+
+#dimensions div {
+
+}
+
+.spec-title {
+  margin-top: 20px;
+}
+
+#dimensions div {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  padding: 3px;
 }

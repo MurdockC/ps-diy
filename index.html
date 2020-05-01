@@ -56,13 +56,15 @@
           <img id="shade" class="window-shade" src="images/shade.png" alt="window sill white">
           <svg id="shade-color" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1629 2340"><defs><style>.cls-1{fill:#fff;}</style></defs><g id="Layer_2" data-name="Layer 2"><polygon id="shade-color-shape" class="cls-1" points="142.24 164.59 1495.17 164.59 1484.38 1953.61 135.17 1953.61 142.24 164.59"/></g></svg>
 
-          <img class="window-motor" src="images/motor.png" alt="window sill white">
-          <svg id="motor-color" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1629 2340"><defs><style>.cls-1{fill:#fff;}</style></defs><path id="motor-color-shape" class="cls-1" d="M127.73,259.85s-17.12-15.63-11.91-87.45c0,0,3-27.16,20.1-30.14V125.52h13.39s5.95-2.23,8.93-11.91h17.12s4.09-5.21,2.23-6-93.77,0-93.77,0l4.47,103.81S90.05,244.12,94,250c0,0,1.68,12.83,11.44,19.81a44.88,44.88,0,0,0,16.19,0l8.06-9Z"/><path id="motor-color-shapetwo" class="cls-1 motor-color-shape" d="M1459.73,107.38s2.23,5,7,5.3,19,0,19,0-.84,10.33,8.37,10h7.54V148.4s3.35,1.4,3.62,9.49h11.45s13.11,3.35,14.23,27.63-.28,37.4-4.75,48-18.69,10-18.69,10,3.63,17.58,11.44,19.53a16.46,16.46,0,0,0,14.51,3.07c8.65-2.23,12-10.05,15.63-21.21s6.14-19,7.25-30.14,5-109.11,5-109.11l-101.58-.28"/></svg>
+          <img class="window-motor roll" src="images/motor.png" alt="window sill white">
 
           <svg id="roll-color" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1629 2340"><defs><style>.cls-1{fill:#fff;}</style></defs><path id="roll-color-shape" class="cls-1" d="M130,142.26,1493.49,144s38,37.12,0,121.08L127.73,262.2S92.75,193.61,130,142.26Z"/></svg>
+          <img class="window-motor cassette" src="images/cassette.png" alt="window sill white">
+          <svg id="cassette-color" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1629 2340"><defs><style>.cls-1{fill:#fff;}</style></defs><path id="cassette-color-shape" class="cls-1" d="M1549.87,104.31s26.59,62.45-5.78,162.91L94.24,269.52S69.68,197,85.31,104.31Z"/></svg>
+
 
 </div>
-
+            <!-- side view on hover -->
             <div class="hover">
               <img id="open-roll" class="window-shade" src="images/open-roll.png" alt="window sill white">
               <svg id="hardware-color" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 329 291"><defs><style>.cls-1{fill:#fff;}</style></defs><path id="hardware-color-shape" class="cls-1" d="M2.5,17.61l21.2-16L55.07,5.18v17.9l-13.13-.26L33.75,33.24s15.63,2.6,8.19,50.6c0,0,3,14.52-7.07,24.19l-14.14,2.23H17l-3.72-3-1.12-4.1S3.24,104.31,2.5,80.5,2.5,17.61,2.5,17.61Z"/></svg>
@@ -121,6 +123,14 @@
               </div>
             </div>
           </div>
+
+          <h5 class="sm-m ps-bold-green p-t-m p-t-b">Style</h5>
+          <div class="shade-style">
+            <button onclick="styleSwapback()">Roll</button>
+            <button onclick="styleSwap()">Case</button>
+
+          </div>
+
             <h5 class="sm-m ps-bold-green p-t-m p-t-b">Fabric</h5>
             <button style="background-color: #494947;" data-hex="#494947" class="custom-picker color"></button>
             <button style="background-color: #474042;" data-hex="#474042" class="custom-picker color"></button>

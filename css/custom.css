@@ -83,12 +83,12 @@ input[type=number] {
   position: relative;
 }
 
-#shade-color, #motor-color, #hardware-color, #roll-color {
+#shade-color, #motor-color, #hardware-color, #roll-color, #cassette-color {
   mix-blend-mode: multiply;
   opacity: 1;
 }
 
-#shade-color-shape, .motor-color-shape, #hardware-color-shape, #roll-color-shape {
+#shade-color-shape, .motor-color-shape, #hardware-color-shape, #roll-color-shape, #cassette-color-shape {
   fill: #fff;
 }
 
@@ -236,4 +236,8 @@ justify-content: space-between;
 .hover {
   display: none;
   background-color: white;
+}
+
+.cassette {
+  display: none;
 }

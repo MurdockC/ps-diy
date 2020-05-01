@@ -23,6 +23,7 @@ function openess0() {
 // Reference the color shape that was drawn over the image
 const overlay = document.getElementById("shade-color-shape");
 const shaderolloverlay = document.getElementById("roll-color-shape");
+const cassetteoverlay = document.getElementById("cassette-color-shape");
 
 // Click on a color
 
@@ -37,6 +38,7 @@ function changeColor(e) {
   // set the hex color
   overlay.style.fill = hex;
   shaderolloverlay.style.fill = hex;
+  cassetteoverlay.style.fill = hex;
 }
 
 
@@ -58,9 +60,6 @@ function changeMotorColor(e) {
   motoroverlay.style.fill = hexcolor;
   motoroverlaytwo.style.fill = hexcolor;
 }
-
-
-
 
 
 // Reference the color shape that was drawn over the image
@@ -96,4 +95,13 @@ function toggleImages() {
 function toggleImagesoff() {
   document.getElementsByClassName("hover")[0].style.display = "none";
   document.getElementsByClassName("hover-hide")[0].style.display = "block";
+}
+
+function styleSwap() {
+  document.getElementsByClassName("cassette")[0].style.display = "block";
+  document.getElementsByClassName("cassette")[1].style.display = "block";
+}
+function styleSwapback() {
+  document.getElementsByClassName("cassette")[0].style.display = "none";
+  document.getElementsByClassName("cassette")[1].style.display = "none";
 }

@@ -83,7 +83,12 @@ input[type=number] {
   position: relative;
 }
 
-#shade-color, #motor-color, #hardware-color, #roll-color, #cassette-color, #roll-hardware {
+#shade-color, #motor-color, #roll-color, #cassette-color {
+  mix-blend-mode: multiply;
+  opacity: .6;
+}
+
+#roll-hardware, #hardware-color {
   mix-blend-mode: multiply;
   opacity: 1;
 }

@@ -48,7 +48,7 @@
       <h1 class="ps-header">DIY<br>Roller shades</h1>
       <div class="blip"></div>
       <div class="row s12 ">
-        <div class="col s5 offset-s1 relative shade-sizing">
+        <div class="col l5 l5 s12 offset-l1 relative shade-sizing">
           <div class="height-fix relative">
             <div class="hover-hide">
               <!-- window -->
@@ -73,7 +73,7 @@
             </div>
           </div>
         </div>
-        <div class="col s4 offset-s1">
+        <div class="col s12 l4 offset-l1">
           <h5 class="ps-bold-green">Size</h5>
           <div style="height: 80px;" class="option row s12 flex v-center">
             <h6 class="col s3 p-m">Height</h6>
@@ -129,6 +129,14 @@
             <button onclick="styleSwap()">Case</button>
           </div>
 
+          <h5 class="sm-m ps-bold-green p-t-m p-t-b">Openness</h5>
+          <h6>This is the amount of light the shade allows</h6>
+          <button onclick="openess10()" style="background: #f2f3f4; color: black" class="custom-picker">10%</button>
+          <button onclick="openess5()" style="background: #DADEDF; color: black" class="custom-picker">5%</button>
+          <button onclick="openess3()" style="background: #A7afb2; color: black" class="custom-picker">3%</button>
+          <button onclick="openess1()" style="background: #555f61;" class="custom-picker">1%</button>
+          <button onclick="openess0()" style="background: black;" class="custom-picker">0%</button>
+
 
 
 
@@ -142,7 +150,7 @@
             <button id="chalkSoftGrey" value="Chalk Soft Grey" style="background-color: #e6e6e6;" data-hex="#e6e6e6" class="custom-picker color"></button>
             <button id="charcoalDarkBronze" value="Charcoal Dark Bronze" style="background-color: #4d3a16;" data-hex="#4d3a16" class="custom-picker color"></button>
             <button id="charcoalIronGrey" value="Charcoal Iron Grey" style="background-color: #787878;" data-hex="#787878" class="custom-picker color"></button>
-            <button id="ebony" value="Ebony" tyle="background-color: #3b3b3b;" data-hex="#3b3b3b" class="custom-picker color"></button>
+            <button id="ebony" value="Ebony" style="background-color: #3b3b3b;" data-hex="#3b3b3b" class="custom-picker color"></button>
             <button id="greySand" value="Grey Sand" style="background-color: #e3ddd1;" data-hex="#e3ddd1" class="custom-picker color"></button>
             <button id="ivory" value="Ivory" style="background-color: #f0ede6;" data-hex="#f0ede6" class="custom-picker color"></button>
             <button id="softGrey" value="Soft Grey" style="background-color: #b5b5b5;" data-hex="#b5b5b5" class="custom-picker color"></button>
@@ -156,13 +164,7 @@
               <button  id="black" value="Black" style="background-color: #494947;" data-hex="#494947" class="custom-picker motor-color"></button>
               <button  id="anthracite"  value="Anthracite" style="background-color: #494947;" data-hex="#494947" class="custom-picker motor-color"></button>
             </div>
-            <h5 class="sm-m ps-bold-green p-t-m p-t-b">Openness</h5>
-            <h6>This is the amount of light the shade allows</h6>
-            <button onclick="openess10()" style="background: #f2f3f4; color: black" class="custom-picker">10%</button>
-            <button onclick="openess5()" style="background: #DADEDF; color: black" class="custom-picker">5%</button>
-            <button onclick="openess3()" style="background: #A7afb2; color: black" class="custom-picker">3%</button>
-            <button onclick="openess1()" style="background: #555f61;" class="custom-picker">1%</button>
-            <button onclick="openess0()" style="background: black;" class="custom-picker">0%</button>
+
 
           <h6 class="spec-title">Shade Specs</h6>
           <div id="dimensions" class="row">

@@ -31,7 +31,7 @@
 /* support */
 .p-m {
   padding: 5px;
-  padding-bottom: 10px;
+  padding-bottom: 30px;
 }
 
 .p-t-m {
@@ -279,7 +279,13 @@ justify-content: space-between;
 
 .myshadedimensions {
   overflow: hidden;
-  padding-top: 30px;
+  padding: 10px;
+  margin-top: 20px;
+  border: 2px solid darkgrey;
+}
+
+.specrow div {
+  display: inline-block ;
 }
 
 button.header-style-bt {
@@ -292,7 +298,13 @@ button.header-style-bt {
   color: #707070;
 }
 
-button.header-style-bt:hover {
+button.header-style-bt:hover,button.header-style-bt:active,button.header-style-bt:focus {
+  color: #8fc640;
+  background: white;
+  border: 2px solid #8fc640;
+}
+
+.styleactive.styleactive.styleactive {
   color: white;
   background: #8fc640;
   border: 2px solid #8fc640;

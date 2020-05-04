@@ -126,11 +126,15 @@ function styleSwap() {
   document.getElementsByClassName("cassette")[0].style.display = "block";
   document.getElementsByClassName("cassette")[1].style.display = "block";
   document.getElementById('hstyle').innerHTML='Cassette';
+  document.getElementById('clickcassette').classList.add("styleactive");
+  document.getElementById('clickroll').classList.remove("styleactive");
 }
 function styleSwapback() {
   document.getElementsByClassName("cassette")[0].style.display = "none";
   document.getElementsByClassName("cassette")[1].style.display = "none";
   document.getElementById('hstyle').innerHTML='Open Roll';
+  document.getElementById('clickroll').classList.add("styleactive");
+  document.getElementById('clickcassette').classList.remove("styleactive");
 }
 
 

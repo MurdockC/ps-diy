@@ -73,6 +73,7 @@ function changeMotorColor(e) {
 
 // Reference the color shape that was drawn over the image
 const rolloverlay = document.getElementById("hardware-color-shape");
+const sidecassetteoverlay = document.getElementById("cassette-side-color-shape");
 const rollhardwareone = document.getElementById("roll-hardware-shape-one");
 const rollhardwaretwo = document.getElementById("roll-hardware-shape-two");
 const spechColor = document.getElementById("hcolor");
@@ -92,21 +93,35 @@ function changeRollColor(e) {
   rolloverlay.style.fill = hexcolor;
   rollhardwareone.style.fill = hexcolor;
   rollhardwaretwo.style.fill = hexcolor;
+  sidecassetteoverlay.style.fill = hexcolor;
   spechColor.innerHTML = hcolor;
 }
 
-// show/hide side view for hardware
+// show/hide side view for hardware on hover
 
+// if ('document.getElementsbyClassName("cassette")[0].style.display == "block"')
 function toggleImages() {
-  document.getElementsByClassName("hover")[0].style.display = "block";
-  document.getElementsByClassName("hover-hide")[0].style.display = "none";
+  if (document.getElementById('hstyle').innerHTML=='Cassette'){
+    document.getElementsByClassName("hover-cassette")[0].style.display = "block";
+    document.getElementsByClassName("hover-hide")[0].style.display = "none";
+    } else {
+      document.getElementsByClassName("hover")[0].style.display = "block";
+      document.getElementsByClassName("hover-hide")[0].style.display = "none";
+    }
 }
 
 function toggleImagesoff() {
+  if (document.getElementById('hstyle').innerHTML=='Cassette'){
+    document.getElementsByClassName("hover-cassette")[0].style.display = "none";
+    document.getElementsByClassName("hover-hide")[0].style.display = "block";
+    } else {
   document.getElementsByClassName("hover")[0].style.display = "none";
   document.getElementsByClassName("hover-hide")[0].style.display = "block";
+  }
 }
 
+
+//Button click swap hardware style
 function styleSwap() {
   document.getElementsByClassName("cassette")[0].style.display = "block";
   document.getElementsByClassName("cassette")[1].style.display = "block";
@@ -116,4 +131,27 @@ function styleSwapback() {
   document.getElementsByClassName("cassette")[0].style.display = "none";
   document.getElementsByClassName("cassette")[1].style.display = "none";
   document.getElementById('hstyle').innerHTML='Open Roll';
+}
+
+
+//update height in customer shade spec
+function updateHeight() {
+  let hValue = document.getElementById('oneoneone').value;
+  document.getElementById('h').innerHTML = hValue;
+}
+
+//update width in customer shade spec
+function updateHeight2() {
+  let hValue2 = document.getElementById('hvalue2').value;
+  document.getElementById('h2').innerHTML = hValue2;
+}
+
+function updateWidth() {
+  let wValue = document.getElementById('twotwotwo').value;
+  document.getElementById('w').innerHTML = wValue;
+}
+
+function updateWidth2() {
+  let wValue2 = document.getElementById('wvalue2').value;
+  document.getElementById('w2').innerHTML = wValue2;
 }

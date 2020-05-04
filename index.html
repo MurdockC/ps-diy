@@ -71,22 +71,28 @@
               <img id="open-roll" class="window-shade" src="images/open-roll.png" alt="window sill white">
               <svg id="hardware-color" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 329 291"><defs><style>.cls-1{fill:#fff;}</style></defs><path id="hardware-color-shape" class="cls-1" d="M2.5,17.61l21.2-16L55.07,5.18v17.9l-13.13-.26L33.75,33.24s15.63,2.6,8.19,50.6c0,0,3,14.52-7.07,24.19l-14.14,2.23H17l-3.72-3-1.12-4.1S3.24,104.31,2.5,80.5,2.5,17.61,2.5,17.61Z"/></svg>
             </div>
+
+            <div class="hover-cassette">
+              <img id="cassette-side" class="window-shade" src="images/cassette-2.png" alt="window sill white">
+            <svg id="cassette-side-color" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 329 291"><defs><style>.cls-1{fill:#fff;}</style></defs><path id="cassette-side-color-shape" class="cls-1" d="M329,54,40.45,2.91V5.7L5.29,31.38v77.86L329,124.87l-.27-5.17L41.7,96.82s4-19.53,3.91-23,4.75-23-3.49-64l-1-2.65.55-1.53L329,56.08Z"/></svg>
+
+            </div>
           </div>
         </div>
         <div class="col s12 l4 offset-l1">
           <h5 class="ps-bold-green">Size</h5>
           <div style="height: 80px;" class="option row s12 flex v-center">
             <h6 class="col s3 p-m">Height</h6>
-            <div  class="col s4 selectbox-parent">
+            <div class="col s4 selectbox-parent">
               <label for="shade-height-1" class="col">Inches</label>
               <div style="padding: 0px; overflow: hidden;" class="input-field col s12 selectbox-child">
-                <input id="oneoneone" class="shade-input selectbox-g-child" style="max-height: 2.2em;" type="number" min="26" max="79" step="1" value="26">
+                <input  onchange="updateHeight()" id="oneoneone" class="shade-input selectbox-g-child" style="max-height: 2.2em;" type="number" min="26" max="79" step="1" value="26">
               </div>
             </div>
             <div class="col s4 selectbox-parent">
               <label for="shade-height-2" class="col">Eighth</label>
               <div style="border-radius: 0px;" class="input-field col s12 selectbox-child">
-                <select style="border-radius: 0px;" class="browser-default">
+                <select id="hvalue2" onchange="updateHeight2()" style="border-radius: 0px;" class="browser-default">
                   <option value="0/0">0/0</option>
                   <option value="1/8">1/8</option>
                   <option value="1/4">1/4</option>
@@ -104,13 +110,13 @@
             <div class="col s4 selectbox-parent">
               <label for="shade-height-1" class="col">Inches</label>
               <div style="padding: 0px; overflow: hidden;" class="input-field col s12 selectbox-child">
-                <input id="twotwotwo" style=""class="sizer shade-input" style="max-height: 2.2em;" type="number" min="26" max="79" step="1" value="26">
+                <input onchange="updateWidth()" id="twotwotwo" style=""class="sizer shade-input" style="max-height: 2.2em;" type="number" min="26" max="79" step="1" value="26">
               </div>
             </div>
             <div class="col s4">
               <label for="shade-width-2" class="col">Eighth</label>
               <div class="input-field shade-input col s12 selectbox-child">
-                <select style="border-radius: 0px;" class="browser-default">
+                <select id="wvalue2" onchange="updateWidth2()" style="border-radius: 0px;" class="browser-default">
                   <option value="0/0">0/0</option>
                   <option value="1/8">1/8</option>
                   <option value="1/4">1/4</option>
@@ -125,8 +131,8 @@
           </div>
           <h5 class="sm-m ps-bold-green p-t-m p-t-b">Style</h5>
           <div class="shade-style">
-            <button onclick="styleSwapback()">Roll</button>
-            <button onclick="styleSwap()">Case</button>
+            <button class="header-style-bt" onclick="styleSwapback()">Open Roll</button>
+            <button class="header-style-bt" onclick="styleSwap()">Cassette</button>
           </div>
 
           <h5 class="sm-m ps-bold-green p-t-m p-t-b">Openness</h5>
@@ -165,42 +171,43 @@
               <button  id="anthracite"  value="Anthracite" style="background-color: #494947;" data-hex="#494947" class="custom-picker motor-color"></button>
             </div>
 
-
-          <h6 class="spec-title">Shade Specs</h6>
-          <div id="dimensions" class="row">
-
-
-            <div class="spec">
-              <p>Height</p>
-              <div id="h">x"</div>
+          <div class="myshadedimensions">
+            <h6 class="ps-bold-green spec-title">My Shade</h6>
+            <div id="dimensions" class="row s12">
+              <div class="dimensionscolumn row s12">
+                <div class="spec col s4">
+                  <p>Height</p>
+                  <div id="h">x"</div>
+                  <div id="h2">x"</div>
+                </div>
+                <div class="spec col s4">
+                  <p>Width</p>
+                  <div id="w">x"</div>
+                  <div id="w2">x"</div>
+                </div>
+                <div class="spec col s4">
+                  <p> Header</p>
+                  <div id="hstyle"></div>
+                </div>
+              </div>
+              <div class="dimensionscolumn row s12">
+                <div class="spec col s4">
+                  <p>Fabric</p>
+                  <div id="fcolor"></div>
+                </div>
+                <div class="spec col s4">
+                  <p>Hardware</p>
+                  <div id="hcolor"></div>
+                </div>
+                <div class="spec col s4">
+                  <p>Openess</p>
+                  <div id="opac"></div>
+                </div>
+              </div>
             </div>
-            <div class="spec">
-              <p>Width</p>
-              <div id="w">x"</div>
-            </div>
-            <div class="spec">
-              <p> Header</p>
-              <div id="hstyle"></div>
-            </div>
-            <div class="spec">
-              <p>Fabric</p>
-              <div id="fcolor"></div>
-            </div>
-            <div class="spec">
-              <p>Hardware</p>
-              <div id="hcolor"></div>
-            </div>
-            <div class="spec">
-              <p>Openess</p>
-              <div id="opac"></div>
-            </div>
-
-
-
-
-
-
           </div>
+
+
           <div class="col s12">
             <button class="col s12 btn large add-cart btn-flat bg-ps-g cart-button">Add to Cart</button>
           </div>

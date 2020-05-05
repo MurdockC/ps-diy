@@ -151,6 +151,7 @@ select, input {
 
 .option {
   margin-bottom: 5px;
+  height: 100px;
 }
 
 .sm-m {
@@ -170,7 +171,6 @@ h1,h2,h3,h4,h5,h6,p,html {
 
 .selectbox-parent {
   height: 100%;
-  top: 0;
 }
 
 .selectbox-child.selectbox-child.selectbox-child {
@@ -288,7 +288,7 @@ justify-content: space-between;
   display: inline-block ;
 }
 
-button.header-style-bt {
+button.header-style-bt, button.hembarstyle {
   padding: 5px 10px 5px 10px;
   border: 2px solid darkgrey;
   background: #fff;
@@ -298,7 +298,7 @@ button.header-style-bt {
   color: #707070;
 }
 
-button.header-style-bt:hover,button.header-style-bt:active,button.header-style-bt:focus {
+button.header-style-bt:hover,button.header-style-bt:active,button.header-style-bt:focus,button.hembarstyle:active,button.hembarstyle:focus,button.hembarstyle:hover {
   color: #8fc640;
   background: white;
   border: 2px solid #8fc640;

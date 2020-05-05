@@ -137,6 +137,21 @@ function styleSwapback() {
   document.getElementById('clickcassette').classList.remove("styleactive");
 }
 
+//hembar style toggleImages
+function styleHembarInternal() {
+  document.getElementById('hembarinternal').classList.add('styleactive');
+  document.getElementById('hembarexternal').classList.remove('styleactive');
+
+  document.getElementById('hs').innerHTML = 'Internal';
+}
+
+function styleHembarExternal() {
+  document.getElementById('hembarexternal').classList.add('styleactive');
+  document.getElementById('hembarinternal').classList.remove('styleactive');
+
+  document.getElementById('hs').innerHTML = 'External';
+}
+
 
 //update height in customer shade spec
 function updateHeight() {
@@ -158,4 +173,23 @@ function updateWidth() {
 function updateWidth2() {
   let wValue2 = document.getElementById('wvalue2').value;
   document.getElementById('w2').innerHTML = wValue2;
+}
+
+
+//shade size measurment validation
+function shadeSizeValidation() {
+  //create var
+  var size, text;
+
+  //get value of input
+  size = getElementById=("oneoneone").value;
+
+  // If x is Not a Number or less than one or greater than 10
+ if (isNaN(size) || size < 26 || size > 97) {
+   text = "Input not valid";
+ } else {
+   text = "Input OK";
+ }
+ document.getElementById("oneoneone").innerHTML = text;
+
 }

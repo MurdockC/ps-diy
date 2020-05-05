@@ -79,12 +79,13 @@
         </div>
         <div class="col s12 l4 offset-l1">
           <h5 class="ps-bold-green">Size</h5>
-          <div style="height: 80px;" class="option row s12 flex v-center">
+          <div class="option row s12 flex v-center">
             <h6 class="col s3 p-m">Height</h6>
             <div class="col s4 selectbox-parent">
-              <label for="shade-height-1" class="col">Inches</label>
-              <div style="padding: 0px; overflow: hidden;" class="input-field col s12 selectbox-child">
-                <input  onchange="updateHeight()" id="oneoneone" class="shade-input selectbox-g-child" style="max-height: 2.2em;" type="number" min="26" max="79" step="1" value="26">
+              <label for="oneoneone" class="col">Inches</label>
+              <div style="padding: 0px;" class="input-field col s12 selectbox-child">
+                <input onfocus="shadeSizeValidation()" onchange="updateHeight()" id="oneoneone" class="shade-input selectbox-g-child" style="max-height: 2.2em;" type="number" min="26" max="79" step="1" value="26">
+                <!-- <p>hello</p> -->
               </div>
             </div>
             <div class="col s4 selectbox-parent">
@@ -106,7 +107,7 @@
           <div class="option row s12 input-field flex v-center">
             <h6 class="col s3 p-m">Width</h6>
             <div class="col s4 selectbox-parent">
-              <label for="shade-height-1" class="col">Inches</label>
+              <label for="twotwotwo" class="col">Inches</label>
               <div style="padding: 0px; overflow: hidden;" class="input-field col s12 selectbox-child">
                 <input onchange="updateWidth()" id="twotwotwo" style=""class="sizer shade-input" style="max-height: 2.2em;" type="number" min="26" max="79" step="1" value="26">
               </div>
@@ -162,6 +163,12 @@
             <button  id="anthracite"  value="Anthracite" style="background-color: #494947;" data-hex="#494947" class="custom-picker motor-color"></button>
           </div>
 
+          <h5 class="sm-m ps-bold-green p-t-m p-t-b">Hem bar Style</h5>
+          <div class="shade-style">
+            <button onclick="styleHembarInternal()" id="hembarinternal" class="hembarstyle">Internal</button>
+            <button onclick="styleHembarExternal()" id="hembarexternal" class="hembarstyle">External</button>
+          </div>
+
           <div class="myshadedimensions">
             <h6 class="ps-bold-green spec-title">My Shade</h6>
             <div id="dimensions" class="row s12">
@@ -197,6 +204,12 @@
                 <div class="spec col s4">
                   <p>Openess</p>
                   <div id="opac">--</div>
+                </div>
+              </div>
+              <div class="dimensionscolumn row s12">
+                <div class="spec col s4">
+                  <p>Fabric</p>
+                  <div id="hs">--</div>
                 </div>
               </div>
             </div>
